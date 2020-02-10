@@ -1,6 +1,10 @@
 name: "PR Checks"
-on: [pull_request, push]
-
+on: 
+  push:
+    branches: 
+      - master
+  watch:
+    types: [started]        
 jobs:
   check_pr:
     runs-on: ubuntu-latest
